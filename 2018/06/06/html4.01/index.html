@@ -11,7 +11,7 @@
 
     <title>
         
-        PaulMing的博客 | PaulMing&#39;s Blog
+        html4.01小结 - PaulMing的博客 | PaulMing&#39;s Blog
         
     </title>
 
@@ -66,7 +66,7 @@
                     <span>标签</span>
                 </a>
             </li>
-            <li class="active">
+            <li>
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
                     <span>存档</span>
@@ -88,6 +88,10 @@
             
         </ul>
     </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">、&lt; p&gt;、、、、 pre,form ,address、dt,dd,dl</span></a></li></ol>
+</div>
     
 </div>
 
@@ -114,75 +118,53 @@
         
 
 
-<!-- 归档列表 -->
+<div class="post-container">
+    <div class="post-title">
+        html4.01小结
+    </div>
 
-<div class="archives-container">
-
-<div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2019">
-                    <span class="tag-text">2019</span>
-                </span>
-    <ul>
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-06-06 21:16:24</span></span>
         
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li>
-            <span>05-10</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2019/05/10/我的第一篇博客/">
-                        <span>
-                            '我的第一篇博客'
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
+        <span class="attr">标签：/
         
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li>
-            <span>05-09</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2019/05/09/hello-world/">
-                        <span>
-                            Hello World
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
+        <a class="tag" href="/tags/#html" title="html">html</a>
+        <span>/</span>
         
-
-    </ul>
-</div>
-
-<div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2018">
-                    <span class="tag-text">2018</span>
-                </span>
-    <ul>
+        <a class="tag" href="/tags/#标签" title="标签">标签</a>
+        <span>/</span>
         
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li>
-            <span>06-06</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2018/06/06/html4.01/">
-                        <span>
-                            html4.01小结
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
         
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
 
-    </ul>
-</div>
+    </div>
+    <div class="post-content ">
+        <p>【全栈记】有半个月没有更新了，本打算以“周记”的方式记录自己的全栈学习过程，但并未做到，两周内我想了蛮多，学习前端的过程中是否应该深挖底层原理，什么时候“深挖”合适？“深挖”多深比较合适？脑海中常常会浮现“技术是怎么发展起来的”，技术的不断发展推动着人类社会文明的进步，特想追根溯源；如今虽然想到的皆是片面，却也很是震憾！目前阶段要把“技术”优先级提到最高，尽快成为合格的“攻城狮”，“全栈记”原定于周更，现在要变成不定时更新啦。初心仍在：希望对读者有所帮助，同时也督促自己不断进步，更新自己的“知识库”。  </p>
+<p><strong>1.html结构</strong>  </p>
+<p><html></html>：html标签是根标签，包含head标签、body标签（结构化标签）；head是给浏览器解析的，body中的内容是给用户展示的；<br>&lt;!DOCTYPE html&gt;：网页文档类型声明，目的是要告诉标准通用标记语言解析器，它应该使用什么样的文档类型定义（DTD）来解析文档；  </p>
+<p><html lang="en">：告诉搜索引擎爬虫该网站是关于什么内容的；language:语言，en：english、zh:中文，de:德语；<html lang="en,zh">  </html></html></p>
+<p><meta charset="utf-8">：编码方式 ,浏览器使用什么编码解析网页；常用的有GB2312（亚洲字符集都包含了，但不包含繁体字），后来推出了GBK，繁体字的问题解决了，unicode：万国码 包含utf-8/urf-16;  </p>
+<p><meta name="viewport" content="width=device-width, initial-scale=1.0">：视口设置，width=device-width：让页面的宽度（视口）等于设备的宽度；innitial-scale=1.0：设置初始缩放比例为1（不缩小不放大）； user-scalable （no,yes）：不允许用户进行缩放；  </p>
+<p><meta http-equiv="X-UA-Compatible" content="ie=edge">：ie=edge:默认ie浏览器，解决浏览器兼容问题；// http-equiv=”X-UA-Compatible”只有IE8可识别，以上代码告诉IE浏览器，无论是否用DTD声明文档标准，IE8/9都会以edge引擎来渲染页面  </p>
+<p><title></title>：网页标题  </p>
+<p><strong>2.html标签</strong><br>行元素(内联元素)：<span>、<a>、<strong>、<em>、i 、del,</em></strong></a></span></p>
+<p>快元素：<div> 、<h1>、&lt; p&gt;、<ul>、<ol>、<li>、 pre,form ,address、dt,dd,dl</li></ol></ul></h1></div></p>
+<p>行内快元素：<img>、<input>、<textarea>、</textarea><button> 、</button><select> 表单元素都是行内快元素</select></p>
+<p>三者都有隐式的属性： display:inline / block / inline-block;</p>
+<p>(1).凡是带有inline的元素，都有文字特性，编辑器中若是折行书写，浏览器渲染两者之间有空格，若是不折行书写，之间的空格消失，这也是后面解决多张图片水平排列默认4px间隔的底层原理;<br> (2).行级元素只能嵌套行级元素，快级元素可以嵌套任何元素；<br> 特殊： [1].p标签中不能嵌套快级元素 </p><p><div></div></p>(其他都正常)  错误用法，控制台：div将p标签分成了两个p标签；<br> [2].a标签中不能嵌套a标签，到底跳转那个？   <p></p>
 
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
 </div>
 
     </div>
@@ -285,7 +267,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
